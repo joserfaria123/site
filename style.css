@@ -88,3 +88,16 @@ footer {
     filter: brightness(0) invert(1); /* Torna a imagem branca */   
     margin: 0;
 }
+
+.div-pb{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dedo{
+    height: 13px;
+    filter: brightness(0) invert(1); /* Torna a imagem branca */   
+    margin: 0;
+}
