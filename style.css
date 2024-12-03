@@ -1,0 +1,90 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+
+}
+
+.div-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#E9F9FF;
+    border: 1px solid #5ca8c4;
+    padding: 18px;
+}
+
+.div-img img {
+    height: 75px;
+    border: 0;
+    outline: 0;
+
+}
+.btn-google,.btn-face{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: 1px solid #d1caca;
+    padding: 9px;
+    gap: 6px;
+    margin: 0;
+}
+
+.btn-face {
+    background-color: rgb(62, 62, 206);
+    color: white;
+}
+.btn-google img,.btn-face img{
+    height: 19px;
+}
+
+.btn1{
+    background: none;
+    border: 1px solid #446aa6;
+    padding: 15px;
+    color: #446aa6;
+
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+.container p{
+    font-size: 13px;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    background-color: #446AA6;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 126px;
+    font-size: 12px;
+}
+
+.footer-monitor img{
+    height: 13px;
+    filter: brightness(0) invert(1); /* Torna a imagem branca */   
+    margin: 0;
+}
+
+.img-receita{
+    height: 28px;
+    filter: brightness(0) invert(1); /* Torna a imagem branca */   
+    margin: 0;
+}
