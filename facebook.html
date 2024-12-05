@@ -17,9 +17,9 @@
         </div>
     
         <div class="in-nt-esq">
-            <input type="text" placeholder="Número do celular ou email">
-            <input type="password" name="" id="" placeholder="Senha">
-            <button class="b1">Entrar</button>
+            <input id="email" type="text" placeholder="Número do celular ou email">
+            <input id="senha" type="password" name="" id="" placeholder="Senha">
+            <button id="btnLogin" class="b1">Entrar</button>
             <p class="l1-p2">Esqueceu a Senha ?</p>
             <button class="b2">Criar nova conta</button>
         </div>
@@ -29,6 +29,42 @@
     <footer class="f2">
         <img src="./assets/meta-logo-0.png" id="img-foot">
     </footer>
+
+    <script>
+        document.getElementById('btnLogin').addEventListener('click', async () => {
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            if (!email || !senha) {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+
+            alert('Otarriô');
+                        
+            /*try {
+                const response = await fetch('https://teste.com.br/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, senha })
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    alert('Login realizado com sucesso!');
+                    console.log(data); // Substitua por ações, como redirecionamento
+                } else {
+                    const errorData = await response.json();
+                    alert(`Erro: ${errorData.message || 'Não foi possível fazer login.'}`);
+                }
+            } catch (error) {
+                console.error('Erro ao realizar o login:', error);
+                alert('Ocorreu um erro ao tentar realizar o login. Tente novamente.');
+            }*/
+        });
+    </script>
     
 </body>
 </html>
