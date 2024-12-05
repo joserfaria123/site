@@ -46,6 +46,10 @@ html{
     height: 19px;
 }
 
+.btn-google{
+    width: 100%;
+}
+
 .btn1{
     background: none;
     border: 1px solid #446aa6;
