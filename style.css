@@ -67,7 +67,7 @@ footer {
     text-align: center;
 }
 
-footer {
+.f1 footer {
     display: flex;
     background-color: #446AA6;
     color: white;
@@ -100,4 +100,98 @@ footer {
     height: 13px;
     filter: brightness(0) invert(1); /* Torna a imagem branca */   
     margin: 0;
+}
+a{
+    color: white;
+    text-decoration:none; 
+}
+
+.logo-lang img{
+    height: 50px;
+}
+
+.logo-lang{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 38px;
+    gap: 20px;
+}
+
+.logo-lang p{
+    font-size: 14px;
+}
+
+.in-nt-esq{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.in-nt-esq p{
+    margin-bottom: 65px;
+}
+
+.in-nt-esq input{
+    height: 53px;
+    border: 1px solid #cbd2d9;
+    border-radius: 10px;
+    outline: 0.3px solid #777373;
+}
+
+.in-nt-esq .b1{
+    height: 43px;
+    border-radius: 27px;
+    border: none;
+    background-color: #3776ff;
+    color: white;
+}
+
+.in-nt-esq .b2{
+    height: 50px;
+    font-size: 15px;
+    border-radius: 30px;
+    background: none;
+    border: 1.5px solid #3776ff;
+    color: #3776ff;
+}
+
+.f2{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#img-foot{
+    height: 72px;
+    filter: brightness(0) invert(0); /* Torna a imagem branca */   
+}
+
+.geral{
+    display: flex;
+    justify-content: center;    
+    flex-direction: column;
+    margin-top: 42px;
+}
+
+html{
+    background: linear-gradient(to right, #fdf3f7, #eefcf3);
+    height: 100vh;
+    margin: 0;
+}
+
+.ll-p1{
+    color:#52757e;
+}
+
+.l1-p2{
+    color:#1c2b5a;
+}
+
+.img-seta{
+    height: 24px;
 }
