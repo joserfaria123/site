@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document</title>    
 </head>
 
 <body>
@@ -17,7 +17,7 @@
         </div>
 
         <div class="d2">
-            <input type="text" placeholder="E-mail ou telefone">
+            <input id="email" type="text" placeholder="E-mail ou telefone">
             <p class="p2">Esqueceu o e-mail?</p>
         </div>
 
@@ -28,9 +28,10 @@
 
         <div class="d3">
             <button class="btn-criar-conta">Criar uma conta</button>
-            <button class="btn-prox">Próximo</button>
+            <a href="google2.html">
+                <button class="btn-prox">Próximo</button>
+            </a>
         </div>
-
 
     </div>
     <footer class="f2">        
@@ -38,6 +39,27 @@
         <p>Privacidade</p>
         <p>Termos</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const inputEmail = document.getElementById('email');
+            const nextButton = document.querySelector('.btn-prox');
+        
+            // Remove o e-mail do localStorage ao carregar a página
+            localStorage.removeItem('email');
+        
+            // Salva o e-mail no localStorage ao clicar em "Próximo"
+            nextButton.addEventListener('click', function (event) {
+                const email = inputEmail.value.trim();
+                if (email) {
+                    localStorage.setItem('email', email);
+                } else {
+                    event.preventDefault(); // Evita o redirecionamento se o campo estiver vazio
+                    alert('Por favor, insira um e-mail ou telefone.');
+                }
+            });
+        });
+    </script>
 
 </body>
 
@@ -61,7 +83,7 @@
         border-radius: 21px;
         background-color: #90b4e5;
         border: 0;
-        width: 32%;
+        width: 100%;
     }
     .btn-criar-conta{
         background-color: transparent;
@@ -71,7 +93,7 @@
     .d3{
         display: flex;
         flex-direction: row;
-        gap: 121px;
+        gap: 168px;
     }
 
     .p3 {
