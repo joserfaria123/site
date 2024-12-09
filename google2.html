@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <footer class="f2">        
+    <footer class="f2">
         <p>Ajuda</p>
         <p>Privacidade</p>
         <p>Termos</p>
@@ -42,7 +42,7 @@
         const checkbox = document.getElementById('in-senha');
         const passwordInput = document.getElementById('in-pas');
 
-        checkbox.addEventListener('change', function() {
+        checkbox.addEventListener('change', function () {
             // Verifica se o checkbox está marcado ou não
             if (checkbox.checked) {
                 // Exibe a senha alterando o tipo do input para 'text'
@@ -55,10 +55,10 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             const paragraph = document.querySelector('.p3-2');
-            
+
             // Recupera o valor do localStorage
             const savedEmail = localStorage.getItem('email');
-            
+
             // Se houver um valor salvo, insira-o sem apagar os elementos existentes
             if (savedEmail) {
                 // Cria um contêiner para o texto
@@ -66,30 +66,125 @@
                 emailText.textContent = `${savedEmail}`;
                 emailText.classList.add('email-text'); // Classe para estilizar o texto
                 paragraph.appendChild(emailText);
-                
+
                 // Cria o triângulo e adiciona na div
                 const triangle = document.createElement('div');
                 triangle.classList.add('triangle');
                 paragraph.appendChild(triangle);
             }
         });
+        document.addEventListener('DOMContentLoaded', function () {
+            const btnProx = document.querySelector('.btn-prox');
+
+            btnProx.addEventListener('click', function () {
+                // Adiciona a classe de carregamento
+                btnProx.classList.add('loading');
+
+                // Simula um carregamento (remova o timeout ao usar lógica real)
+                setTimeout(() => {
+                    btnProx.classList.remove('loading');
+                    alert('Ops... algo deu errado, tente novamente mais tarde !!!')
+                }, 5000); // 3 segundos
+            });
+        });
     </script>
 </body>
 
 <style>
-    .c-chk{
+    /* Efeito de carregamento no botão */
+    .btn-prox.loading {
+        position: relative;
+        color: transparent;
+        pointer-events: none;
+    }
+
+    .btn-prox.loading::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #fff;
+        border-top-color: transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        transform: translate(-50%, -50%);
+    }
+
+    @keyframes spin {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+
+    .lds-ring,
+    .lds-ring div {
+        box-sizing: border-box;
+    }
+
+    .lds-ring {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+    }
+
+    .lds-ring div {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border: 8px solid currentColor;
+        border-radius: 50%;
+        animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: currentColor transparent transparent transparent;
+    }
+
+    .lds-ring div:nth-child(1) {
+        animation-delay: -0.45s;
+    }
+
+    .lds-ring div:nth-child(2) {
+        animation-delay: -0.3s;
+    }
+
+    .lds-ring div:nth-child(3) {
+        animation-delay: -0.15s;
+    }
+
+    @keyframes lds-ring {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+
+    .c-chk {
         display: flex;
         align-items: center;
     }
 
-    .c-chk input{
+    .c-chk input {
         height: 20px !important;
     }
-    
-    .img-cl{
+
+    .img-cl {
         height: 26px !important;
-        filter: brightness(0) invert(1); /* Torna a imagem branca */   
+        filter: brightness(0) invert(1);
+        /* Torna a imagem branca */
     }
+
     .triangle {
         width: 0;
         height: 0;
@@ -97,33 +192,37 @@
         border-right: 5.25px solid transparent;
         border-top: 6.5px solid #ffffff;
     }
-    .f2{
+
+    .f2 {
         position: fixed;
         gap: 17px;
         display: flex;
         bottom: 0;
-        color: #e7e7e7;;
+        color: #e7e7e7;
+        ;
         left: 0;
         font-size: 14px;
         width: 100%;
         text-align: center;
-        padding: 10px;        
+        padding: 10px;
         margin-left: 10px;
     }
 
-    .btn-prox{
+    .btn-prox {
         height: 37px;
         border-radius: 21px;
         background-color: #90b4e5;
         border: 0;
         width: 32%;
     }
-    .btn-criar-conta{
+
+    .btn-criar-conta {
         background-color: transparent;
         color: #90b4e5;
         border: 0;
     }
-    .d3{
+
+    .d3 {
         display: flex;
         flex-direction: row-reverse;
         gap: 121px;
@@ -139,28 +238,31 @@
         border-radius: 16px;
         display: flex;
         align-items: center;
-        justify-content: space-between; /* Garante que o texto fique à esquerda e o triângulo à direita */
+        justify-content: space-between;
+        /* Garante que o texto fique à esquerda e o triângulo à direita */
         gap: 8px;
     }
 
-    .p3-2 p{
+    .p3-2 p {
         margin: 0;
         padding: 0;
         border: 0;
-    
+
     }
 
     .p4 {
         color: #e7e7e7;
         font-size: 14px;
     }
-    
+
     .destaque {
         color: #90b4e5;
     }
-    .p2{
+
+    .p2 {
         color: white;
     }
+
     .d2 .in-pas {
         width: 100%;
         height: 50px;

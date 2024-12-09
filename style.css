@@ -1,9 +1,9 @@
-html{
+html {
     font-family: Arial, Helvetica, sans-serif;
 
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,11 +11,11 @@ html{
 
 }
 
-.div-img{
+.div-img {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:#E9F9FF;
+    background-color: #E9F9FF;
     border: 1px solid #5ca8c4;
     padding: 18px;
 }
@@ -26,7 +26,9 @@ html{
     outline: 0;
 
 }
-.btn-google,.btn-face{
+
+.btn-google,
+.btn-face {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,15 +44,17 @@ html{
     color: white;
     width: 100%;
 }
-.btn-google img,.btn-face img{
+
+.btn-google img,
+.btn-face img {
     height: 19px;
 }
 
-.btn-google{
+.btn-google {
     width: 100%;
 }
 
-.btn1{
+.btn1 {
     background: none;
     border: 1px solid #446aa6;
     padding: 15px;
@@ -68,7 +72,7 @@ footer {
     background-color: #f1f1f1;
 }
 
-.container p{
+.container p {
     font-size: 13px;
     text-align: center;
 }
@@ -83,40 +87,44 @@ footer {
     font-size: 12px;
 }
 
-.footer-monitor img{
+.footer-monitor img {
     height: 13px;
-    filter: brightness(0) invert(1); /* Torna a imagem branca */   
+    filter: brightness(0) invert(1);
+    /* Torna a imagem branca */
     margin: 0;
 }
 
-.img-receita{
+.img-receita {
     height: 28px;
-    filter: brightness(0) invert(1); /* Torna a imagem branca */   
+    filter: brightness(0) invert(1);
+    /* Torna a imagem branca */
     margin: 0;
 }
 
-.div-pb{
+.div-pb {
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#dedo{
+#dedo {
     height: 13px;
-    filter: brightness(0) invert(1); /* Torna a imagem branca */   
+    filter: brightness(0) invert(1);
+    /* Torna a imagem branca */
     margin: 0;
 }
-a{
+
+a {
     color: white;
-    text-decoration:none; 
+    text-decoration: none;
 }
 
-.logo-lang img{
+.logo-lang img {
     height: 50px;
 }
 
-.logo-lang{
+.logo-lang {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -125,11 +133,11 @@ a{
     gap: 20px;
 }
 
-.logo-lang p{
+.logo-lang p {
     font-size: 14px;
 }
 
-.in-nt-esq{
+.in-nt-esq {
     display: flex;
     flex-direction: column;
     gap: 13px;
@@ -138,18 +146,18 @@ a{
     margin-top: 15px;
 }
 
-.in-nt-esq p{
+.in-nt-esq p {
     margin-bottom: 65px;
 }
 
-.in-nt-esq input{
+.in-nt-esq input {
     height: 53px;
     border: 1px solid #cbd2d9;
     border-radius: 10px;
     outline: 0.3px solid #777373;
 }
 
-.in-nt-esq .b1{
+.in-nt-esq .b1 {
     height: 43px;
     border-radius: 27px;
     border: none;
@@ -157,7 +165,7 @@ a{
     color: white;
 }
 
-.in-nt-esq .b2{
+.in-nt-esq .b2 {
     height: 50px;
     font-size: 15px;
     border-radius: 30px;
@@ -166,38 +174,71 @@ a{
     color: #3776ff;
 }
 
-.f2{
+.f2 {
     background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#img-foot{
+
+#img-foot {
     height: 72px;
-    filter: brightness(0) invert(0); /* Torna a imagem branca */   
+    filter: brightness(0) invert(0);
+    /* Torna a imagem branca */
 }
 
-.geral{
+.geral {
     display: flex;
-    justify-content: center;    
+    justify-content: center;
     flex-direction: column;
     margin-top: 42px;
 }
 
-html{
+html {
     background: linear-gradient(to right, #fdf3f7, #eefcf3);
     height: 100vh;
     margin: 0;
 }
 
-.ll-p1{
-    color:#52757e;
+.ll-p1 {
+    color: #52757e;
 }
 
-.l1-p2{
-    color:#1c2b5a;
+.l1-p2 {
+    color: #1c2b5a;
 }
 
-.img-seta{
+.img-seta {
     height: 24px;
+}
+
+/* Efeito de carregamento no botão */
+.b1.loading {
+    position: relative;
+    color: transparent;
+    pointer-events: none;
+}
+
+.b1.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
